@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SyncStaff — Contact</title>
-<meta name="description" content="Book a demo, ask about pricing, or request an integration.">
+<title>SyncStaff — Org Chart</title>
+<meta name="description" content="An always-current org chart generated from real reporting lines — not a slide someone updates quarterly.">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -14 206 156"><circle cx="40" cy="24" r="13" fill="%234C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="%234C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="%239333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="%234C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="%237C3AED" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="%237C3AED"/></svg>'>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -132,32 +132,61 @@
 <main>
 
 <section class="page-hero">
-  <div class="container" style="text-align:center">
-    <span class="pill-tag pt-purple">Contact</span>
-    <h1>Let's <span class="hl">talk</span></h1>
-    <p class="lead" style="margin-left:auto;margin-right:auto">Questions, demos, pricing, partnerships — we reply within one business day.</p>
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / <a href="features.html">Core HR</a> / <span>Org Chart</span></div>
+    <span class="pill-tag pt-blue">Core HR</span>
+    <h1>Your company, <span class="hl">mapped live</span></h1>
+    <p class="lead">An always-current org chart generated from real reporting lines — not a slide someone updates quarterly.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px">
+      <a class="btn btn-ink btn-lg" href="https://hrmanagementsystem1.vercel.app/login">Start free <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-line btn-lg" href="contact.html">Book a demo</a>
+    </div>
+    <div class="banner reveal"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80" alt="Org Chart — SyncStaff" loading="lazy"></div>
   </div>
 </section>
-<section style="padding-top:20px">
+<section>
+  <div class="container"><div class="grid-3"><div class="card reveal"><div class="icon ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/><circle cx="9" cy="7" r="4"/></svg></div><h3>Auto-generated</h3><p>Built from manager relationships in the system, or synced from Microsoft Entra ID.</p></div><div class="card reveal"><div class="icon ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div><h3>Always current</h3><p>New hire? Reorg? The chart updates the moment records do.</p></div><div class="card reveal"><div class="icon ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Team insights</h3><p>Span of control, open seats, and department sizes at a glance.</p></div></div></div>
+</section>
+<section style="padding-top:0">
   <div class="container">
-    <div class="contact-grid">
-      <div class="form-card reveal">
-        <div id="form-msg" class="form-msg" role="status" aria-live="polite"></div>
-        <form id="contact-form">
-          <div class="field"><label for="cf-name">Full name *</label><input id="cf-name" type="text" required autocomplete="name" placeholder="Jane Doe"></div>
-          <div class="field"><label for="cf-email">Work email *</label><input id="cf-email" type="email" required autocomplete="email" placeholder="jane@company.com"></div>
-          <div class="field"><label for="cf-size">Company size</label><select id="cf-size"><option>1–10 employees</option><option>11–50</option><option>51–250</option><option>250+</option></select></div>
-          <div class="field"><label for="cf-topic">Topic</label><select id="cf-topic"><option>Book a demo</option><option>Pricing</option><option>Integration request</option><option>Support</option><option>Partnership</option><option>Careers</option><option>Something else</option></select></div>
-          <div class="field"><label for="cf-msg">Message *</label><textarea id="cf-msg" rows="5" required placeholder="Tell us a little about your team and what you need…"></textarea>
-          <div class="help">Please don't include passwords or sensitive personal data.</div></div>
-          <button type="submit" class="btn btn-ink btn-lg" style="width:100%">Send message</button>
-        </form>
+    <div class="split">
+      <div class="txt reveal">
+        <span class="pill-tag pt-blue">Built in, not bolted on</span>
+        <h2>Everything connected to the rest of SyncStaff</h2>
+        <ul class="check-list"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Drill-down</b> — from CEO to every team</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Profile cards</b> — photo, role, location, contact</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Export</b> — share as image or PDF</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Privacy-aware</b> — respects field visibility rules</span></li></ul>
+        <a class="link-arrow" href="features.html">See all features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <div class="reveal reveal-d1">
-        <div class="info-card"><h3>Email</h3><p><a href="mailto:hello@syncstaff.app">hello@syncstaff.app</a></p></div>
-        <div class="info-card"><h3>Sales &amp; demos</h3><p><a href="mailto:sales@syncstaff.app">sales@syncstaff.app</a><br>We'll walk your team through the platform live.</p></div>
-        <div class="info-card"><h3>Support</h3><p><a href="mailto:support@syncstaff.app">support@syncstaff.app</a><br>Priority response for Growth &amp; Enterprise.</p></div>
-        <div class="info-card"><h3>Response time</h3><p>Within one business day, Monday–Friday.</p></div>
+      <div class="img reveal reveal-d1"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Team working together" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal"><span class="pill-tag pt-blue">How it works</span><h2>Three steps, no training manual</h2></div>
+    <div class="steps"><div class="step reveal"><h3>Reporting lines exist</h3><p>Manager relationships come from records or directory sync.</p></div><div class="step reveal"><h3>The chart draws itself</h3><p>No boxes to drag, ever.</p></div><div class="step reveal"><h3>Everyone finds everyone</h3><p>Employees navigate the org without asking around.</p></div></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal"><h2>Common questions</h2></div>
+    <div class="faq reveal"><div class="faq-item"><button class="faq-q" aria-expanded="false">Can we show dotted lines?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Secondary reporting lines are on the roadmap; primary lines render today.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Does it work with Entra ID?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Yes — directory sync keeps managers, titles, and departments aligned with Microsoft 365.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Can we hide certain fields?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Field-level visibility controls what non-HR users see.</p></div></div></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sec-head left reveal"><h2>More from Core HR</h2></div>
+    <div class="grid-3"><a class="pcard reveal" href="documents.html"><div class="ph"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80" alt="Document Manager" loading="lazy"></div><div class="body"><h3>Document Manager</h3><p>Contracts, payslips, policies, and certificates — organized per employee, permission-contr…</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="pcard reveal" href="employee-portal.html"><div class="ph"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80" alt="Employee Portal" loading="lazy"></div><div class="body"><h3>Employee Portal</h3><p>One login for payslips, time off, expenses, documents, and goals — on any device, without …</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="pcard reveal" href="reports.html"><div class="ph"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80" alt="Reports & KPIs" loading="lazy"></div><div class="body"><h3>Reports & KPIs</h3><p>Headcount, absence, overtime, turnover, and cost — live dashboards and one-click reports y…</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Ready to run HR <span style="opacity:.85">the modern way?</span></h2>
+      <p>Start free with your first 10 employees, or book a demo and we'll walk you through it.</p>
+      <div class="actions">
+        <a class="btn btn-ink btn-lg" href="https://hrmanagementsystem1.vercel.app/login">Get started free</a>
+        <a class="btn btn-line btn-lg" href="contact.html">Book a demo</a>
       </div>
     </div>
   </div>

@@ -4,114 +4,216 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SyncStaff — Integrations</title>
-<meta name="description" content="Microsoft 365, SharePoint, Slack, Gusto, DocuSign, Checkr, and a public API — SyncStaff connects to your stack.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237C3AED'/><path d='M7 22l6-6 4 3 8-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M19 10h6v6' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<meta name="description" content="Microsoft 365, SharePoint, Slack, Gusto, DocuSign, Checkr and more — plus a public API with webhooks.">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -14 206 156"><circle cx="40" cy="24" r="13" fill="%234C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="%234C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="%239333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="%234C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="%237C3AED" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="%237C3AED"/></svg>'>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="blobs" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+<div class="topbar">SyncStaff is live — run HR for your whole team in one place.<a href="https://hrmanagementsystem1.vercel.app/login">Start free →</a></div>
 <header class="nav">
   <div class="nav-inner">
-    <a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.4" r="1.7" fill="#fff" stroke="none"/><path d="M3.5 17.5l5.5-5.5 4 3 7.5-8.5"/><path d="M15.5 6.5h5v5"/></svg></span>SyncStaff</a>
-    <nav aria-label="Main">
-      <ul class="nav-links">
-        <li><a href="features.html">Features</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="integrations.html">Integrations</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <a class="logo" href="index.html" aria-label="SyncStaff home"><svg viewBox="0 0 186 128" width="40" height="28" aria-hidden="true"><defs><linearGradient id="agn" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><circle cx="40" cy="24" r="13" fill="#4C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="#4C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="#9333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="#4C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="url(#agn)" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="#7C3AED"/></svg><span><span style="color:#4C1D95">SYNC</span><span style="color:#9333EA">STAFF</span></span></a>
+    <ul class="menu" id="menu">
+      <li class="has-mega">
+        <button class="menu-btn" aria-expanded="false">Product <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega cols-3">
+          <div>
+            <h5><span class="swatch sw-time"></span>Time Management</h5>
+            <ul>
+              <li><a href="time-off.html"><b>Time Off</b><span>Requests, approvals & balances</span></a></li>
+              <li><a href="time-tracking.html"><b>Time Tracking</b><span>Timesheets your team will fill in</span></a></li>
+              <li><a href="shift-management.html"><b>Shift Management</b><span>Plan schedules without spreadsheets</span></a></li>
+              <li><a href="project-tracking.html"><b>Project Tracking</b><span>Hours against projects & billing</span></a></li>
+              <li><a class="see-all" href="time-management.html">More about Time →</a></li>
+            </ul>
+            <h5 style="margin-top:16px"><span class="swatch sw-finance"></span>Payroll &amp; Finance</h5>
+            <ul>
+              <li><a href="payroll.html"><b>Payroll Preparation</b><span>Approved data, payroll-ready</span></a></li>
+              <li><a href="expenses.html"><b>Expenses</b><span>Receipts, mileage & approvals</span></a></li>
+              <li><a href="e-signature.html"><b>E-Signature</b><span>Sign documents online</span></a></li>
+              <li><a class="see-all" href="finance.html">More about Finance →</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5><span class="swatch sw-talent"></span>Talent Management</h5>
+            <ul>
+              <li><a href="onboarding-offboarding.html"><b>Onboarding & Offboarding</b><span>Checklists from hello to goodbye</span></a></li>
+              <li><a href="talent-acquisition.html"><b>Talent Acquisition</b><span>Pipeline, interviews & offers</span></a></li>
+              <li><a href="performance.html"><b>Performance</b><span>Reviews, feedback & 1-on-1s</span></a></li>
+              <li><a href="training.html"><b>Training</b><span>Courses & certifications</span></a></li>
+              <li><a href="goals-okr.html"><b>Goals & OKRs</b><span>Objectives everyone can see</span></a></li>
+              <li><a class="see-all" href="talent-management.html">More about Talent →</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5><span class="swatch sw-core"></span>Core HR</h5>
+            <ul>
+              <li><a href="documents.html"><b>Document Manager</b><span>One safe home for HR files</span></a></li>
+              <li><a href="employee-portal.html"><b>Employee Portal</b><span>Self-service for your team</span></a></li>
+              <li><a href="reports.html"><b>Reports & KPIs</b><span>Answers, not exports</span></a></li>
+              <li><a href="org-chart.html"><b>Org Chart</b><span>Your company, mapped</span></a></li>
+              <li><a href="automations.html"><b>Automations</b><span>Workflows that run themselves</span></a></li>
+              <li><a class="see-all" href="features.html">All features →</a></li>
+            </ul>
+            <h5 style="margin-top:16px"><span class="swatch sw-res"></span>Connect</h5>
+            <ul><li><a href="integrations.html"><b>Integrations</b><span>Microsoft 365, Slack & more</span></a></li></ul>
+          </div>
+        </div>
+      </li>
+      <li class="has-mega">
+        <button class="menu-btn" aria-expanded="false">Solutions <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega cols-2">
+          <div>
+            <h5><span class="swatch sw-ind"></span>By Industry</h5>
+            <ul>
+              <li><a href="industry-retail.html"><b>Retail</b><span>HR for stores & frontline teams</span></a></li>
+              <li><a href="industry-hospitality.html"><b>Hospitality</b><span>Rotas, tips & high turnover, solved</span></a></li>
+              <li><a href="industry-healthcare.html"><b>Healthcare</b><span>Compliance-first workforce ops</span></a></li>
+              <li><a href="industry-technology.html"><b>Technology</b><span>Scale people ops with your growth</span></a></li>
+              <li><a href="industry-education.html"><b>Education</b><span>Schools, districts & co-ops</span></a></li>
+              <li><a href="industry-construction.html"><b>Construction</b><span>Crews, sites & certifications</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <h5><span class="swatch sw-role"></span>By Role</h5>
+            <ul>
+              <li><a href="role-hr.html"><b>For HR Managers</b><span>Automate the admin, keep the human</span></a></li>
+              <li><a href="role-ceo.html"><b>For CEOs & Founders</b><span>Visibility into people & costs</span></a></li>
+              <li><a href="role-employees.html"><b>For Employees</b><span>Everything self-serve, one login</span></a></li>
+              <li><a class="see-all" href="solutions.html">All solutions →</a></li>
+            </ul>
+            <h5 style="margin-top:16px"><span class="swatch sw-co"></span>Proof</h5>
+            <ul><li><a href="customers.html"><b>Customer Stories</b><span>Teams working smarter with SyncStaff</span></a></li></ul>
+          </div>
+        </div>
+      </li>
+      <li class="has-mega">
+        <button class="menu-btn" aria-expanded="false">Resources <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega cols-1">
+          <div>
+            <h5><span class="swatch sw-res"></span>Learn</h5>
+            <ul>
+              <li><a href="blog.html"><b>Blog</b><span>Best practices for people teams</span></a></li>
+              <li><a href="guides.html"><b>Guides & eBooks</b><span>Deep dives you can act on</span></a></li>
+              <li><a href="templates.html"><b>Templates</b><span>Checklists, policies & letters</span></a></li>
+              <li><a href="webinars.html"><b>Webinars & Events</b><span>Live sessions with HR experts</span></a></li>
+              <li><a class="see-all" href="resources.html">All resources →</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="has-mega">
+        <button class="menu-btn" aria-expanded="false">Company <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega cols-1">
+          <div>
+            <h5><span class="swatch sw-co"></span>SyncStaff</h5>
+            <ul>
+              <li><a href="about.html"><b>About Us</b><span>Our story, values & team</span></a></li>
+              <li><a href="customers.html"><b>Customers</b><span>Who we work with</span></a></li>
+              <li><a href="careers.html"><b>Careers</b><span>Come build with us</span></a></li>
+              <li><a href="partners.html"><b>Partner Program</b><span>Grow your business with SyncStaff</span></a></li>
+              <li><a href="security.html"><b>Security</b><span>How we protect your data</span></a></li>
+              <li><a href="contact.html"><b>Contact</b><span>We reply within one business day</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a class="menu-btn" href="pricing.html">Pricing</a></li>
+    </ul>
     <div class="nav-cta">
-      <a class="btn btn-ghost" href="https://hrmanagementsystem1.vercel.app/login">Sign in</a>
-      <a class="btn btn-primary" href="https://hrmanagementsystem1.vercel.app/login">Get started</a>
+      <a class="btn btn-line" href="https://hrmanagementsystem1.vercel.app/login">Log in</a>
+      <a class="btn btn-ink" href="https://hrmanagementsystem1.vercel.app/login">Get started</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
   </div>
 </header>
+
 <main>
 
 <section class="page-hero">
-  <div class="container stagger">
-    <span class="kicker">Integrations</span>
-    <h1>Connected to the tools<br><span class="grad-text">you already use</span></h1>
-    <p>SyncStaff meets your stack where it is: identity, payroll, communication, documents, and a public API for everything else.</p>
-  </div>
-</section>
-<section style="padding-top:20px">
   <div class="container">
-    <div class="sec-head reveal"><span class="kicker">Available now</span><h2>Live integrations</h2></div>
-    <div class="int-grid reveal">
-      <div class="int-card"><span class="dot2">M</span><div><b>Microsoft 365</b><span>SSO sign-in with Entra ID</span></div></div>
-      <div class="int-card"><span class="dot2">EID</span><div><b>Entra directory sync</b><span>Profiles, managers &amp; roles, daily</span></div></div>
-      <div class="int-card"><span class="dot2">SP</span><div><b>SharePoint</b><span>Payroll export to document library</span></div></div>
-      <div class="int-card"><span class="dot2">SB</span><div><b>Supabase Storage</b><span>Receipts, avatars &amp; attachments</span></div></div>
-    </div>
+    <div class="crumbs"><a href="index.html">Home</a> / <span>Integrations</span></div>
+    <span class="pill-tag pt-blue">Integrations</span>
+    <h1>Connected to the tools <span class="hl">you already use</span></h1>
+    <p class="lead">Identity, payroll, communication, documents — plus a public API and webhooks for everything else.</p>
   </div>
 </section>
-<section>
+<section style="padding-top:10px">
   <div class="container">
-    <div class="sec-head reveal"><span class="kicker">On the roadmap</span><h2>Shipping next</h2><p>Prioritized by customer demand — tell us what you need first.</p></div>
-    <div class="int-grid reveal">
-      <div class="int-card"><span class="dot2">S</span><div><b>Slack</b><span>Approval alerts &amp; who's-out digest</span></div></div>
-      <div class="int-card"><span class="dot2">T</span><div><b>Microsoft Teams</b><span>Notifications &amp; approvals</span></div></div>
-      <div class="int-card"><span class="dot2">G</span><div><b>Gusto</b><span>Push approved hours to payroll</span></div></div>
-      <div class="int-card"><span class="dot2">ADP</span><div><b>ADP</b><span>Payroll sync via unified API</span></div></div>
-      <div class="int-card"><span class="dot2">QB</span><div><b>QuickBooks</b><span>Payroll &amp; expense journals</span></div></div>
-      <div class="int-card"><span class="dot2">D</span><div><b>DocuSign</b><span>Offer letters &amp; policy sign-off</span></div></div>
-      <div class="int-card"><span class="dot2">DS</span><div><b>Dropbox Sign</b><span>Lightweight e-signature</span></div></div>
-      <div class="int-card"><span class="dot2">C</span><div><b>Checkr</b><span>Background checks from the ATS</span></div></div>
-      <div class="int-card"><span class="dot2">GC</span><div><b>Google Calendar</b><span>Leave &amp; interview events</span></div></div>
-      <div class="int-card"><span class="dot2">O</span><div><b>Outlook Calendar</b><span>Leave &amp; interview events</span></div></div>
-      <div class="int-card"><span class="dot2">OK</span><div><b>Okta</b><span>SAML SSO &amp; SCIM provisioning</span></div></div>
-      <div class="int-card"><span class="dot2">Z</span><div><b>Zoom</b><span>Interview links</span></div></div>
-    </div>
+    <div class="sec-head left reveal"><h2>Available now</h2></div>
+    <div class="grid-4"><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-blue" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">M</span><div><b style="display:block;font-size:.92rem">Microsoft 365</b><span style="font-size:.76rem;color:var(--ink-3)">SSO sign-in with Entra ID</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-blue" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">EID</span><div><b style="display:block;font-size:.92rem">Directory Sync</b><span style="font-size:.76rem;color:var(--ink-3)">Profiles, managers & roles daily</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-green" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">SP</span><div><b style="display:block;font-size:.92rem">SharePoint</b><span style="font-size:.76rem;color:var(--ink-3)">Payroll export to your library</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-amber" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">SB</span><div><b style="display:block;font-size:.92rem">Storage</b><span style="font-size:.76rem;color:var(--ink-3)">Receipts, avatars & documents</span></div></div></div>
+    <div class="sec-head left reveal" style="margin-top:56px"><h2>Shipping next</h2><p>Prioritized by customer demand — tell us what you need first.</p></div>
+    <div class="grid-4"><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-purple" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">S</span><div><b style="display:block;font-size:.92rem">Slack</b><span style="font-size:.76rem;color:var(--ink-3)">Approvals & who's-out digest</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-blue" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">T</span><div><b style="display:block;font-size:.92rem">Teams</b><span style="font-size:.76rem;color:var(--ink-3)">Notifications & approvals</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-green" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">G</span><div><b style="display:block;font-size:.92rem">Gusto</b><span style="font-size:.76rem;color:var(--ink-3)">Push approved hours to payroll</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-green" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">ADP</span><div><b style="display:block;font-size:.92rem">ADP</b><span style="font-size:.76rem;color:var(--ink-3)">Payroll via unified API</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-green" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">QB</span><div><b style="display:block;font-size:.92rem">QuickBooks</b><span style="font-size:.76rem;color:var(--ink-3)">Payroll & expense journals</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-amber" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">D</span><div><b style="display:block;font-size:.92rem">DocuSign</b><span style="font-size:.76rem;color:var(--ink-3)">Offers & policy sign-off</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-amber" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">DS</span><div><b style="display:block;font-size:.92rem">Dropbox Sign</b><span style="font-size:.76rem;color:var(--ink-3)">Lightweight e-signature</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-rose" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">C</span><div><b style="display:block;font-size:.92rem">Checkr</b><span style="font-size:.76rem;color:var(--ink-3)">Background checks from the ATS</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-blue" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">GC</span><div><b style="display:block;font-size:.92rem">Google Calendar</b><span style="font-size:.76rem;color:var(--ink-3)">Leave & interview events</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-blue" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">O</span><div><b style="display:block;font-size:.92rem">Outlook</b><span style="font-size:.76rem;color:var(--ink-3)">Leave & interview events</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-purple" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">OK</span><div><b style="display:block;font-size:.92rem">Okta</b><span style="font-size:.76rem;color:var(--ink-3)">SAML SSO & SCIM</span></div></div><div class="card reveal" style="display:flex;gap:14px;align-items:center;padding:20px 22px"><span class="float-ic ic-blue" style="font-family:var(--display);font-weight:800;font-size:.85rem;display:grid;place-items:center;color:var(--ink)">Z</span><div><b style="display:block;font-size:.92rem">Zoom</b><span style="font-size:.76rem;color:var(--ink-3)">Interview links</span></div></div></div>
   </div>
 </section>
-<section>
+<section style="padding-top:0">
   <div class="container">
     <div class="grid-2">
-      <div class="feat reveal">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <h3>Public REST API</h3>
-        <p>Org-scoped API keys, granular permissions, and predictable JSON. Build your own automations on employees, timesheets, leave, and expenses.</p>
-      </div>
-      <div class="feat reveal reveal-d1">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5L3 21l4.5-1.5M15 3l6 6-9.5 9.5a4 4 0 01-2 1L5 21l1.5-4.5a4 4 0 011-2L17 5z"/></svg></div>
-        <h3>Webhooks</h3>
-        <p>Subscribe to events like <code style="font-family:var(--font-mono);font-size:.82rem;color:#6D28D9">employee.created</code>, <code style="font-family:var(--font-mono);font-size:.82rem;color:#6D28D9">leave.approved</code>, or <code style="font-family:var(--font-mono);font-size:.82rem;color:#6D28D9">offboarding.completed</code> and trigger your own workflows instantly.</p>
-      </div>
+      <div class="card reveal"><div class="icon ic-purple"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Public REST API</h3><p>Org-scoped API keys, granular permissions, predictable JSON. Build your own automations on employees, time, leave, and expenses.</p></div>
+      <div class="card reveal reveal-d1"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg></div><h3>Webhooks</h3><p>Subscribe to events like employee.created, leave.approved, or offboarding.completed and trigger your own workflows instantly.</p></div>
     </div>
   </div>
 </section>
+
 <section>
   <div class="container">
     <div class="cta-band reveal">
-      <h2>Need a specific <span class="grad-text">integration?</span></h2>
+      <h2>Need a specific integration?</h2>
       <p>Enterprise plans include custom connections. Tell us what your stack looks like.</p>
-      <div class="hero-cta"><a class="btn btn-primary btn-lg" href="contact.html">Talk to us</a></div>
+      <div class="actions">
+        <a class="btn btn-ink btn-lg" href="https://hrmanagementsystem1.vercel.app/login">Get started free</a>
+        <a class="btn btn-line btn-lg" href="contact.html">Book a demo</a>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
+
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div>
-        <a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.4" r="1.7" fill="#fff" stroke="none"/><path d="M3.5 17.5l5.5-5.5 4 3 7.5-8.5"/><path d="M15.5 6.5h5v5"/></svg></span>SyncStaff</a>
-        <p>The modern HR platform for the entire employee lifecycle — built by Jegsplus Solutions.</p>
+        <a class="logo" href="index.html" aria-label="SyncStaff home"><svg viewBox="0 0 186 128" width="40" height="28" aria-hidden="true"><defs><linearGradient id="agf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><circle cx="40" cy="24" r="13" fill="#4C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="#4C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="#9333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="#4C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="url(#agf)" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="#7C3AED"/></svg><span><span style="color:#C4B5FD">SYNC</span><span style="color:#E9D5FF">STAFF</span></span></a>
+        <p>The HR platform for the entire employee lifecycle — onboarding to offboarding. Built by Jegsplus Solutions.</p>
       </div>
-      <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="security.html">Security</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+      <div><h4>Product</h4><ul>
+        <li><a href="time-management.html">Time Management</a></li>
+        <li><a href="talent-management.html">Talent Management</a></li>
+        <li><a href="finance.html">Payroll &amp; Finance</a></li>
+        <li><a href="features.html">All Features</a></li>
+        <li><a href="integrations.html">Integrations</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul></div>
+      <div><h4>Solutions</h4><ul>
+        <li><a href="solutions.html">By Industry &amp; Role</a></li>
+        <li><a href="role-hr.html">For HR Managers</a></li>
+        <li><a href="role-ceo.html">For CEOs</a></li>
+        <li><a href="role-employees.html">For Employees</a></li>
+        <li><a href="customers.html">Customers</a></li>
+      </ul></div>
+      <div><h4>Resources</h4><ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="guides.html">Guides &amp; eBooks</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="webinars.html">Webinars</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 SyncStaff · Jegsplus Solutions. All rights reserved.</span>
-      <span><a href="mailto:hello@syncstaff.app">hello@syncstaff.app</a></span>
+      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:hello@syncstaff.app">hello@syncstaff.app</a></span>
     </div>
   </div>
 </footer>
 <script src="main.js"></script>
+
 </body>
 </html>
