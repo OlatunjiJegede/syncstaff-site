@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SyncStaff — Project Tracking</title>
+<title>SyncStaff | Project Tracking</title>
 <meta name="description" content="Track time against projects and clients, see budgets burn in real time, and bill with confidence.">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -14 206 156"><circle cx="40" cy="24" r="13" fill="%234C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="%234C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="%239333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="%234C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="%237C3AED" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="%237C3AED"/></svg>'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10,14 206 156"><circle cx="40" cy="24" r="13" fill="%234C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="%234C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="%239333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="%234C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="%237C3AED" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="%237C3AED"/></svg>'>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="topbar">SyncStaff is live — run HR for your whole team in one place.<a href="https://hrmanagementsystem1.vercel.app/login">Start free →</a></div>
+<div class="topbar">SyncStaff is live, run HR for your whole team in one place.<a href="https://hrmanagementsystem1.vercel.app/login">Start free →</a></div>
 <header class="nav">
   <div class="nav-inner">
     <a class="logo" href="index.html" aria-label="SyncStaff home"><svg viewBox="0 0 186 128" width="40" height="28" aria-hidden="true"><defs><linearGradient id="agn" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><circle cx="40" cy="24" r="13" fill="#4C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="#4C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="#9333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="#4C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="url(#agn)" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="#7C3AED"/></svg><span><span style="color:#4C1D95">SYNC</span><span style="color:#9333EA">STAFF</span></span></a>
@@ -19,7 +19,8 @@
         <button class="menu-btn" aria-expanded="false">Product <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mega cols-3">
           <div>
-            <h5><span class="swatch sw-time"></span>Time Management</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-time">Time Management</h5>
             <ul>
               <li><a href="time-off.html"><b>Time Off</b><span>Requests, approvals & balances</span></a></li>
               <li><a href="time-tracking.html"><b>Time Tracking</b><span>Timesheets your team will fill in</span></a></li>
@@ -27,7 +28,7 @@
               <li><a href="project-tracking.html"><b>Project Tracking</b><span>Hours against projects & billing</span></a></li>
               <li><a class="see-all" href="time-management.html">More about Time →</a></li>
             </ul>
-            <h5 style="margin-top:16px"><span class="swatch sw-finance"></span>Payroll &amp; Finance</h5>
+            <h5 class="mh-finance" style="margin-top:16px">Payroll &amp; Finance</h5>
             <ul>
               <li><a href="payroll.html"><b>Payroll Preparation</b><span>Approved data, payroll-ready</span></a></li>
               <li><a href="expenses.html"><b>Expenses</b><span>Receipts, mileage & approvals</span></a></li>
@@ -36,7 +37,8 @@
             </ul>
           </div>
           <div>
-            <h5><span class="swatch sw-talent"></span>Talent Management</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-talent">Talent Management</h5>
             <ul>
               <li><a href="onboarding-offboarding.html"><b>Onboarding & Offboarding</b><span>Checklists from hello to goodbye</span></a></li>
               <li><a href="talent-acquisition.html"><b>Talent Acquisition</b><span>Pipeline, interviews & offers</span></a></li>
@@ -47,7 +49,8 @@
             </ul>
           </div>
           <div>
-            <h5><span class="swatch sw-core"></span>Core HR</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-core">Core HR</h5>
             <ul>
               <li><a href="documents.html"><b>Document Manager</b><span>One safe home for HR files</span></a></li>
               <li><a href="employee-portal.html"><b>Employee Portal</b><span>Self-service for your team</span></a></li>
@@ -56,7 +59,7 @@
               <li><a href="automations.html"><b>Automations</b><span>Workflows that run themselves</span></a></li>
               <li><a class="see-all" href="features.html">All features →</a></li>
             </ul>
-            <h5 style="margin-top:16px"><span class="swatch sw-res"></span>Connect</h5>
+            <h5 class="mh-res" style="margin-top:16px">Connect</h5>
             <ul><li><a href="integrations.html"><b>Integrations</b><span>Microsoft 365, Slack & more</span></a></li></ul>
           </div>
         </div>
@@ -65,7 +68,8 @@
         <button class="menu-btn" aria-expanded="false">Solutions <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mega cols-2">
           <div>
-            <h5><span class="swatch sw-ind"></span>By Industry</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-ind">By Industry</h5>
             <ul>
               <li><a href="industry-retail.html"><b>Retail</b><span>HR for stores & frontline teams</span></a></li>
               <li><a href="industry-hospitality.html"><b>Hospitality</b><span>Rotas, tips & high turnover, solved</span></a></li>
@@ -76,14 +80,15 @@
             </ul>
           </div>
           <div>
-            <h5><span class="swatch sw-role"></span>By Role</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-role">By Role</h5>
             <ul>
               <li><a href="role-hr.html"><b>For HR Managers</b><span>Automate the admin, keep the human</span></a></li>
               <li><a href="role-ceo.html"><b>For CEOs & Founders</b><span>Visibility into people & costs</span></a></li>
               <li><a href="role-employees.html"><b>For Employees</b><span>Everything self-serve, one login</span></a></li>
               <li><a class="see-all" href="solutions.html">All solutions →</a></li>
             </ul>
-            <h5 style="margin-top:16px"><span class="swatch sw-co"></span>Proof</h5>
+            <h5 class="mh-co" style="margin-top:16px">Proof</h5>
             <ul><li><a href="customers.html"><b>Customer Stories</b><span>Teams working smarter with SyncStaff</span></a></li></ul>
           </div>
         </div>
@@ -92,7 +97,8 @@
         <button class="menu-btn" aria-expanded="false">Resources <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mega cols-1">
           <div>
-            <h5><span class="swatch sw-res"></span>Learn</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-res">Learn</h5>
             <ul>
               <li><a href="blog.html"><b>Blog</b><span>Best practices for people teams</span></a></li>
               <li><a href="guides.html"><b>Guides & eBooks</b><span>Deep dives you can act on</span></a></li>
@@ -107,7 +113,8 @@
         <button class="menu-btn" aria-expanded="false">Company <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mega cols-1">
           <div>
-            <h5><span class="swatch sw-co"></span>SyncStaff</h5>
+            <div class="mega-ph"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=520&q=80" alt="" loading="lazy"></div>
+            <h5 class="mh-co">SyncStaff</h5>
             <ul>
               <li><a href="about.html"><b>About Us</b><span>Our story, values & team</span></a></li>
               <li><a href="customers.html"><b>Customers</b><span>Who we work with</span></a></li>
@@ -141,11 +148,11 @@
       <a class="btn btn-ink btn-lg" href="https://hrmanagementsystem1.vercel.app/login">Start free <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-line btn-lg" href="contact.html">Book a demo</a>
     </div>
-    <div class="banner reveal"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Project Tracking — SyncStaff" loading="lazy"></div>
+    <div class="banner reveal"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Project Tracking, SyncStaff" loading="lazy"></div>
   </div>
 </section>
 <section>
-  <div class="container"><div class="grid-3"><div class="card reveal"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Projects & codes</h3><p>Every project gets a code, an owner, and an optional budget in hours.</p></div><div class="card reveal"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Live burn-down</h3><p>Logged vs. budgeted hours, by project and by person — updated with every timesheet.</p></div><div class="card reveal"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Billing-ready exports</h3><p>Approved project hours export for invoicing or payroll allocation.</p></div></div></div>
+  <div class="container"><div class="grid-3"><div class="card reveal"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Projects & codes</h3><p>Every project gets a code, an owner, and an optional budget in hours.</p></div><div class="card reveal"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Live burn-down</h3><p>Logged vs. budgeted hours, by project and by person, updated with every timesheet.</p></div><div class="card reveal"><div class="icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Billing-ready exports</h3><p>Approved project hours export for invoicing or payroll allocation.</p></div></div></div>
 </section>
 <section style="padding-top:0">
   <div class="container">
@@ -153,7 +160,7 @@
       <div class="txt reveal">
         <span class="pill-tag pt-amber">Built in, not bolted on</span>
         <h2>Everything connected to the rest of SyncStaff</h2>
-        <ul class="check-list"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Required-project rules</b> — client work always lands on a code</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Cross-team visibility</b> — one project, many contributors</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Historical rates</b> — cost snapshots stay accurate</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>YTD summaries</b> — hours per project, per quarter</span></li></ul>
+        <ul class="check-list"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Required-project rules</b>, client work always lands on a code</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Cross-team visibility</b>, one project, many contributors</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>Historical rates</b>, cost snapshots stay accurate</span></li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span><span><b>YTD summaries</b>, hours per project, per quarter</span></li></ul>
         <a class="link-arrow" href="features.html">See all features <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="img reveal reveal-d1"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80" alt="Team working together" loading="lazy"></div>
@@ -163,19 +170,19 @@
 <section style="padding-top:0">
   <div class="container">
     <div class="sec-head reveal"><span class="pill-tag pt-amber">How it works</span><h2>Three steps, no training manual</h2></div>
-    <div class="steps"><div class="step reveal"><h3>Set up projects</h3><p>Create codes, set owners and budgets — or import your existing list.</p></div><div class="step reveal"><h3>Time flows in</h3><p>Timesheets tag hours to projects automatically.</p></div><div class="step reveal"><h3>Review & bill</h3><p>Dashboards show burn; exports feed invoices.</p></div></div>
+    <div class="steps"><div class="step reveal"><h3>Set up projects</h3><p>Create codes, set owners and budgets, or import your existing list.</p></div><div class="step reveal"><h3>Time flows in</h3><p>Timesheets tag hours to projects automatically.</p></div><div class="step reveal"><h3>Review & bill</h3><p>Dashboards show burn; exports feed invoices.</p></div></div>
   </div>
 </section>
 <section style="padding-top:0">
   <div class="container">
     <div class="sec-head reveal"><h2>Common questions</h2></div>
-    <div class="faq reveal"><div class="faq-item"><button class="faq-q" aria-expanded="false">Can a timesheet split hours across projects?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Yes — each row targets a billing type and project, so one week can span many codes.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Do budgets block overruns?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Budgets warn by default; you can make them hard limits per project.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Does this replace a PM tool?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>No — it complements one. SyncStaff owns the hours; your PM tool owns the tasks.</p></div></div></div>
+    <div class="faq reveal"><div class="faq-item"><button class="faq-q" aria-expanded="false">Can a timesheet split hours across projects?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Yes, each row targets a billing type and project, so one week can span many codes.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Do budgets block overruns?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>Budgets warn by default; you can make them hard limits per project.</p></div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Does this replace a PM tool?<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><p>No, it complements one. SyncStaff owns the hours; your PM tool owns the tasks.</p></div></div></div>
   </div>
 </section>
 <section style="padding-top:0">
   <div class="container">
     <div class="sec-head left reveal"><h2>More from Time Management</h2></div>
-    <div class="grid-3"><a class="pcard reveal" href="time-off.html"><div class="ph"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1400&q=80" alt="Time Off" loading="lazy"></div><div class="body"><h3>Time Off</h3><p>Employees request in seconds, managers approve in one tap, balances update automatically. …</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="pcard reveal" href="time-tracking.html"><div class="ph"><img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1400&q=80" alt="Time Tracking" loading="lazy"></div><div class="body"><h3>Time Tracking</h3><p>Weekly or monthly timesheets with autosave drafts, project tracking, and automatic totals …</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="pcard reveal" href="shift-management.html"><div class="ph"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80" alt="Shift Management" loading="lazy"></div><div class="body"><h3>Shift Management</h3><p>Plan rotas visually, publish to everyone's phone, and handle swaps without group-chat arch…</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
+    <div class="grid-3"><a class="pcard reveal" href="time-off.html"><div class="ph"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1400&q=80" alt="Time Off" loading="lazy"></div><div class="body"><h3>Time Off</h3><p>Employees request in seconds, managers approve in one tap, balances update automatically. …</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="pcard reveal" href="time-tracking.html"><div class="ph"><img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1400&q=80" alt="Time Tracking" loading="lazy"></div><div class="body"><h3>Time Tracking</h3><p>Weekly or monthly timesheets with autosave drafts, project tracking, and automatic totals:…</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a><a class="pcard reveal" href="shift-management.html"><div class="ph"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80" alt="Shift Management" loading="lazy"></div><div class="body"><h3>Shift Management</h3><p>Plan rotas visually, publish to everyone's phone, and handle swaps without group-chat arch…</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a></div>
   </div>
 </section>
 
@@ -199,7 +206,7 @@
     <div class="foot-grid">
       <div>
         <a class="logo" href="index.html" aria-label="SyncStaff home"><svg viewBox="0 0 186 128" width="40" height="28" aria-hidden="true"><defs><linearGradient id="agf" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><circle cx="40" cy="24" r="13" fill="#4C1D95"/><path d="M 58 44 A 26 26 0 1 0 59 72" fill="none" stroke="#4C1D95" stroke-width="17" stroke-linecap="round"/><circle cx="106" cy="16" r="13" fill="#9333EA"/><path d="M 88 84 A 23 23 0 1 0 132 92" fill="none" stroke="#4C1D95" stroke-width="16" stroke-linecap="round"/><path d="M 6 110 C 44 86 62 76 86 58 C 108 42 126 32 144 23" fill="none" stroke="url(#agf)" stroke-width="17" stroke-linecap="round"/><path d="M 170 6 L 152 40 L 133 15 Z" fill="#7C3AED"/></svg><span><span style="color:#C4B5FD">SYNC</span><span style="color:#E9D5FF">STAFF</span></span></a>
-        <p>The HR platform for the entire employee lifecycle — onboarding to offboarding. Built by Jegsplus Solutions.</p>
+        <p>The HR platform for the entire employee lifecycle, onboarding to offboarding. Built by Jegsplus Solutions.</p>
       </div>
       <div><h4>Product</h4><ul>
         <li><a href="time-management.html">Time Management</a></li>

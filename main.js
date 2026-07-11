@@ -1,10 +1,11 @@
-// SyncStaff v2 — interactions
+// SyncStaff v2: interactions
 (function () {
   var mq = window.matchMedia('(max-width: 720px)');
 
-  // mega menu (desktop hover + click, mobile accordion)
+  // mega menu (desktop hover with grace delay + click, mobile accordion)
   document.querySelectorAll('.menu > li.has-mega').forEach(function (li) {
     var btn = li.querySelector('.menu-btn');
+    var closeTimer = null;
     function closeAll(except) {
       document.querySelectorAll('.menu > li.open').forEach(function (o) {
         if (o !== except) o.classList.remove('open');
@@ -12,13 +13,23 @@
     }
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
-      var willOpen = !li.classList.contains('open');
+      var isOpen = li.classList.contains('open');
+      if (!mq.matches && isOpen) return; // desktop: clicking an open menu keeps it open
       closeAll(li);
-      li.classList.toggle('open', willOpen);
-      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      li.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
     });
-    li.addEventListener('mouseenter', function () { if (!mq.matches) { closeAll(li); li.classList.add('open'); } });
-    li.addEventListener('mouseleave', function () { if (!mq.matches) li.classList.remove('open'); });
+    li.addEventListener('mouseenter', function () {
+      if (mq.matches) return;
+      clearTimeout(closeTimer);
+      closeAll(li);
+      li.classList.add('open');
+    });
+    li.addEventListener('mouseleave', function () {
+      if (mq.matches) return;
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { li.classList.remove('open'); }, 260);
+    });
   });
   document.addEventListener('click', function () {
     document.querySelectorAll('.menu > li.open').forEach(function (o) { o.classList.remove('open'); });
@@ -97,6 +108,34 @@
     });
   }
   wireForm('contact-form', 'form-msg', 'Thanks! Your message has been recorded. We reply within one business day.');
+
+  // hero slider (Deel-style chips)
+  var slides = document.getElementById('hero-slides');
+  if (slides) {
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-slide]'));
+    var idx = 0, n = slides.children.length, timer = null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(i) {
+      idx = (i + n) % n;
+      slides.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      chips.forEach(function (c, j) { c.classList.toggle('active', j === idx); });
+    }
+    function auto() {
+      if (reduce) return;
+      timer = setInterval(function () { go(idx + 1); }, 4500);
+    }
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        clearInterval(timer);
+        go(parseInt(c.dataset.slide, 10));
+        auto();
+      });
+    });
+    var sliderEl = slides.closest('.slider');
+    sliderEl.addEventListener('mouseenter', function () { clearInterval(timer); });
+    sliderEl.addEventListener('mouseleave', function () { clearInterval(timer); auto(); });
+    auto();
+  }
   document.querySelectorAll('form.email-cta').forEach(function (f) {
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
