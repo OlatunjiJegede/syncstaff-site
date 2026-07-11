@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SyncStaff — Security</title>
+<meta name="description" content="Row-level security, encryption, audit trails, SSO, and backups: how SyncStaff protects HR data.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237C3AED'/><path d='M7 22l6-6 4 3 8-9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M19 10h6v6' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blobs" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.4" r="1.7" fill="#fff" stroke="none"/><path d="M3.5 17.5l5.5-5.5 4 3 7.5-8.5"/><path d="M15.5 6.5h5v5"/></svg></span>SyncStaff</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="integrations.html">Integrations</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://hrmanagementsystem1.vercel.app/login">Sign in</a>
+      <a class="btn btn-primary" href="https://hrmanagementsystem1.vercel.app/login">Get started</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container stagger">
+    <span class="kicker">Security</span>
+    <h1>Your people data,<br><span class="grad-text">protected by design</span></h1>
+    <p>HR data is some of the most sensitive data a company holds. Here's exactly how SyncStaff protects it.</p>
+  </div>
+</section>
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="grid-3">
+      <div class="feat reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Row-level security</h3><p>Permissions are enforced in the database itself, not just the app. Employees can only read their own records; managers only their reports'; HR and admins per role.</p></div>
+      <div class="feat reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Full audit trail</h3><p>Every submit, approval, rejection, and role change is written to an append-only audit log with actor, timestamp, and before/after state.</p></div>
+      <div class="feat reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Encryption</h3><p>TLS 1.2+ for all traffic in transit. AES-256 encryption at rest for the database and file storage (receipts, documents, attachments).</p></div>
+      <div class="feat reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/><circle cx="9" cy="7" r="4"/></svg></div><h3>Least-privilege access</h3><p>Service credentials are never exposed to browsers. Server-side keys are scoped, rotated, and stored in managed secret stores.</p></div>
+      <div class="feat reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-5"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Single sign-on</h3><p>Microsoft Entra ID SSO with single-tenant restriction today; SAML SSO and SCIM provisioning for Enterprise on the roadmap.</p></div>
+      <div class="feat reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h3>Backups &amp; recovery</h3><p>Automated daily backups with point-in-time recovery on our managed Postgres infrastructure (Supabase).</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container prose reveal">
+    <h2>Infrastructure</h2>
+    <p>SyncStaff runs on Vercel (application hosting, US region) and Supabase (managed PostgreSQL, storage, and authentication). Both providers maintain SOC 2 Type II compliance programs for their infrastructure.</p>
+    <h2>Responsible disclosure</h2>
+    <p>Found a vulnerability? Email <a href="mailto:security@syncstaff.app" style="color:#C4B5FD">security@syncstaff.app</a>. We acknowledge reports within 48 hours and do not pursue action against good-faith research.</p>
+    <h2>Data processing</h2>
+    <p>Enterprise customers can request our Data Processing Agreement, sub-processor list, and security questionnaire responses via <a href="contact.html" style="color:#C4B5FD">sales</a>.</p>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.4" r="1.7" fill="#fff" stroke="none"/><path d="M3.5 17.5l5.5-5.5 4 3 7.5-8.5"/><path d="M15.5 6.5h5v5"/></svg></span>SyncStaff</a>
+        <p>The modern HR platform for the entire employee lifecycle — built by Jegsplus Solutions.</p>
+      </div>
+      <div><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="security.html">Security</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 SyncStaff · Jegsplus Solutions. All rights reserved.</span>
+      <span><a href="mailto:hello@syncstaff.app">hello@syncstaff.app</a></span>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
