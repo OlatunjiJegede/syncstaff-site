@@ -139,7 +139,7 @@
   document.querySelectorAll('form.email-cta').forEach(function (f) {
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
-      window.location.href = 'https://hrmanagementsystem1.vercel.app/login';
+      window.location.href = 'contact.html';
     });
   });
 })();
